@@ -4,30 +4,30 @@ import json
 import sys
 
 # ==================== CONFIGURAÇÕES DE CONEXÃO ====================
-# IMPORTANTE: Altere este IP para o endereço da máquina que está rodando o servidor_pim.py!
-HOST_SERVIDOR = '26.113.61.226'  # TROCAR ESTE IP
+
+HOST_SERVIDOR = '0.0.0.0'  # TROCAR ESTE IP
 PORTA_SERVIDOR = 50007
 
 # ==================== FUNÇÕES DE COMUNICAÇÃO (CLIENTE) ====================
 def enviar_comando(sock, comando):
-    """Envia um comando formatado para o servidor e recebe a resposta."""
+
     try:
-        # Protocolo de envio: [TAMANHO: 10 bytes][MENSAGEM]
+        
         comando_bytes = comando.encode('utf-8')
         tamanho = f"{len(comando_bytes):<10}" # '123      '
         sock.sendall(tamanho.encode('utf-8') + comando_bytes)
         
-        # Protocolo de recebimento: [TAMANHO: 10 bytes][MENSAGEM]
+        
         tamanho_bytes = sock.recv(10)
         if not tamanho_bytes:
             return "❌ ERRO: Servidor desconectou (cabeçalho)."
             
         tamanho_msg = int(tamanho_bytes.decode('utf-8').strip())
         
-        # Recebe a mensagem completa com base no tamanho
+        
         dados_recebidos = b""
         while len(dados_recebidos) < tamanho_msg:
-            # Pede o restante dos dados (ou 4096 bytes)
+            
             parte = sock.recv(min(tamanho_msg - len(dados_recebidos), 4096))
             if not parte:
                 return "❌ ERRO: Servidor desconectou (dados)."
@@ -37,7 +37,7 @@ def enviar_comando(sock, comando):
         
     except ConnectionResetError:
         print("\n❌ ERRO FATAL: A conexão com o servidor foi perdida.")
-        sys.exit() # Fecha o cliente
+        sys.exit() 
     except Exception as e:
         print(f"\n❌ ERRO de comunicação: {e}")
         sys.exit()
@@ -54,14 +54,12 @@ def imprimir_resposta(resposta_str, cache_key=None, cache_ref=None):
             if not dados:
                 print("(Nenhum item encontrado/retornado)")
             
-            # Salva no cache se os parâmetros foram passados
+         
             if cache_key and cache_ref is not None:
-                # Cria um dicionário de ID -> item para busca rápida
+                
                 cache_ref[cache_key] = {item.get('id'): item for item in dados}
-                # Não imprime o "cache atualizado" para não poluir a tela
-                # print(f"(Lista de '{cache_key}' atualizada no cache.)")
-
-            # Imprime os dados formatados
+               
+               
             for item in dados:
                 print("---")
                 info = []
@@ -746,4 +744,5 @@ def main():
                 continue # Volta para o topo do 'while True:', mostrando a tela de login
 
 if __name__ == "__main__":
+
     main()
