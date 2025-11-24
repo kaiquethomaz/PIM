@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nome": "Pedro Pedraga",
+        "matricula": "P001",
+        "senha": "ee5cd7d5d96c8874117891b2c92a036f96918e66c102bc698ae77542c186f981"
+    },
+    {
+        "id": 2,
+        "nome": "Gabriel Carralero",
+        "matricula": "P002",
+        "senha": "0c030df5a4e7477d218012c0121ebce6d61bb8dc46e0a6c4f8e1cc8091b946a5"
+    },
+    {
+        "id": 3,
+        "nome": "Gabriel",
+        "matricula": "P011",
+        "senha": "ff06535ac1029cca2fc2b86ac7355a7b4e0b8d839fc76b51d30833f4e1347ddc"
+    },
+    {
+        "id": 4,
+        "nome": "Guilherme",
+        "matricula": "P010",
+        "senha": "5ee55df0d1ff39ec2b86fb0e9fdca3d4e82e51e209d455c709ac038613aeed10"
+    },
+    {
+        "id": 5,
+        "nome": "Pedro",
+        "matricula": "P100",
+        "senha": "ee5cd7d5d96c8874117891b2c92a036f96918e66c102bc698ae77542c186f981"
+    },
+    {
+        "id": 6,
+        "nome": "Gustavo Rodrigues",
+        "matricula": "P007",
+        "senha": "67daae98ed0c612857a716202f463356ffcf1a018ce140ab4a4bebc8eb274e6d"
+    }
+]

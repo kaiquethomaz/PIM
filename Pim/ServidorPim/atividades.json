@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nome": "Prova – Fundamentos de TI",
+        "descricao": "Avaliação sobre hardware, software, sistemas operacionais e redes básicas.",
+        "nota": 8.5,
+        "turma_id": 1,
+        "notas": {}
+    },
+    {
+        "id": 2,
+        "nome": "Prova – Lógica de Programação",
+        "descricao": "Questões sobre algoritmos, operadores lógicos, estruturas condicionais e repetição.",
+        "nota": 7.0,
+        "turma_id": 1,
+        "notas": {}
+    },
+    {
+        "id": 3,
+        "nome": "Trabalho – Introdução a Redes",
+        "descricao": "Relatório sobre redes, topologias e dispositivos.",
+        "nota": 9.0,
+        "turma_id": 2,
+        "notas": {}
+    }
+]

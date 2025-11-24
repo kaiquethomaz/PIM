@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "nome": "Pedro Henrique",
+        "matricula": "A2024001"
+    },
+    {
+        "id": 2,
+        "nome": "Julia Martins",
+        "matricula": "A2024002"
+    },
+    {
+        "id": 3,
+        "nome": "Kaique Thomaz Coelho",
+        "matricula": "A2024003"
+    }
+]
