@@ -49,6 +49,8 @@ o tamanho da mensagem (10 bytes)
 depois a mensagem (ex: listar_alunos)
 
 O servidor lê, executa a ação e devolve.
+
+
 -----------------------------------------------------------------------------------------------------
 
 ▶️ Como Rodar
