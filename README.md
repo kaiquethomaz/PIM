@@ -48,7 +48,41 @@ o tamanho da mensagem (10 bytes)
 
 depois a mensagem (ex: listar_alunos)
 
-O servidor lê, executa a ação e devolve:
+O servidor lê, executa a ação e devolve.
+-----------------------------------------------------------------------------------------------------
+
+▶️ Como Rodar
+1️⃣ Abra o servidor
+
+No terminal, digite:
+
+python ServidorPim.py
+
+
+Isso inicia o sistema e deixa ele esperando conexões.
+
+Deixe o servidor aberto.
+
+2️⃣ Configure o cliente
+
+No arquivo ClientePim.py, coloque o IP do servidor nesta linha:
+
+HOST_SERVIDOR = 'SEU_IP_AQUI'
+
+
+Se for no mesmo computador, use:
+
+HOST_SERVIDOR = '127.0.0.1'
+
+3️⃣ Abra o cliente
+
+Agora execute:
+
+python ClientePim.py
+
+
+Ele vai conectar no servidor e mostrar o menu.
+
 
 o tamanho da resposta
 
